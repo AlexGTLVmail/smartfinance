@@ -1,0 +1,287 @@
+/* Адаптивность */
+@media (max-width: 1166px) {
+.left_img_item img{
+        width: 100%;
+        padding-left: 5px;
+            }
+.right_img_item img{
+        width: 100%;
+        padding-right: 5px;
+                    }
+                    .gets_items {
+
+                        clip-path: polygon( 0% 0%,100% 0%,100% 75.228%,54.681% 75.228%,54.681% 75.228%,54.461% 75.292%,54.247% 75.485%,54.04% 75.805%,53.839% 76.253%,53.644% 76.829%,53.456% 77.532%,53.274% 78.363%,53.1% 79.32%,52.932% 80.403%,52.77% 81.613%,50.807% 97.451%,50.807% 97.451%,50.673% 98.368%,50.527% 99.081%,50.371% 99.59%,50.208% 99.895%,50.043% 99.997%,49.877% 99.895%,49.715% 99.59%,49.559% 99.081%,49.412% 98.368%,49.278% 97.451%,47.315% 81.613%,47.315% 81.613%,47.154% 80.402%,46.986% 79.318%,46.811% 78.361%,46.629% 77.531%,46.441% 76.828%,46.247% 76.253%,46.046% 75.805%,45.838% 75.485%,45.624% 75.292%,45.404% 75.228%,0% 75.228%,0% 0%,0% 0% );
+                    }
+
+
+
+                    
+}
+@media (max-width: 1500px) {
+        .gets_items {    
+            clip-path: polygon( 0% 0%,100% 0%,100% 75.228%,54.681% 75.228%,54.681% 75.228%,54.461% 75.292%,54.247% 75.485%,54.04% 75.805%,53.839% 76.253%,53.644% 76.829%,53.456% 77.532%,53.274% 78.363%,53.1% 79.32%,52.932% 80.403%,52.77% 81.613%,50.807% 97.451%,50.807% 97.451%,50.673% 98.368%,50.527% 99.081%,50.371% 99.59%,50.208% 99.895%,50.043% 99.997%,49.877% 99.895%,49.715% 99.59%,49.559% 99.081%,49.412% 98.368%,49.278% 97.451%,47.315% 81.613%,47.315% 81.613%,47.154% 80.402%,46.986% 79.318%,46.811% 78.361%,46.629% 77.531%,46.441% 76.828%,46.247% 76.253%,46.046% 75.805%,45.838% 75.485%,45.624% 75.292%,45.404% 75.228%,0% 75.228%,0% 0%,0% 0% );
+            }
+                        
+    }
+@media (max-width: 700px) {
+        .peaple-container {
+            /* border: 2px solid black; */
+                        
+    }
+    .analytics-image img {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+/* ВЕРХНЯЯ ФОРМА ЗВОНКА И ОФОРМЛЕНИЯ ЗАЯВКИ */
+.grid-additional-block {
+    margin: 0;
+    margin-bottom: 0;
+ }
+ .grid-additional button {    
+    padding-top: 5px;   
+    padding-bottom: 5px; 
+    
+    align-items:center ;
+}
+    .gridFormBtn,.gridAddBtn,.gridGetComm{
+display: none;
+      }
+      .gridSubApplication{
+        display: block;
+        position: absolute;
+        margin-right: 5px;
+        right:0;
+      }
+      .gridSubApplication p{
+        display: block;
+        padding: 3px 5px 3px 5px;
+        border: 1px black solid;
+        border-radius: 5px;
+        font-family: 'Montserrat Semi Bold', sans-serif;
+        
+      }
+      .gridaddspan h2{
+padding-left: 15px;
+    }
+
+    /*mobile  ФОРМА КНОПОК ЗАКАЗАТЬ ЗВОНОК_ ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ */
+
+    .grid-additional_mobile {
+        grid-template-areas:"fone getfone present getcom";
+        overflow-wrap: anywhere;
+        display: grid;
+        grid-template-columns: 33.34%  33.333% 33.333%;   
+        max-width: 1151px; /* Максимальная ширина контейнера */
+        width: 100%; /* Занимает всю доступную ширину до 1151px */
+        padding: 0px; /* Внутренние отступы для контейнера */
+        box-sizing: border-box; /* Учитываем padding в ширине контейнера */
+       
+    }
+    .grid-additional_mobile button { 
+       
+        display: flex; 
+        padding-top: 5px;   
+        padding-bottom: 3px; 
+        
+    }
+    .grid-additional_mobile button img{    
+        width: clamp(18px, 4.170vw, 45px);
+        margin-left: 5px;
+        display: block; 
+
+     }
+    
+    
+.grid-additional_mobile  button:hover {
+        background: linear-gradient(45deg, #84dd1d, #c4e0e5);
+        cursor: pointer; } 
+
+
+.gridFormBtn_mobile, .gridAddBtn_mobile, .gridGetComm_mobile{
+    font-size:clamp(5px, 0.798vw, 15px);
+  background: rgb(163, 198, 38);
+    background: linear-gradient(30deg, rgba(163, 198, 38, 1) 26%, rgba(63, 171, 60, 1) 71%);
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 28% 72%;
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+    gap: 2px;
+  }
+  .gridaddspan p {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(5px, 2.600vw, 15px);
+}
+ /*mobile  ФОРМА КНОПОК ЗАКАЗАТЬ ЗВОНОК_ ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ */
+
+/* МОБИЛЬНОЕ МЕНЮ В СТРОКУ*/
+.get_items_menu{
+    display: none;
+}
+.mobile_menu{ 
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-bottom: 0;
+        text-align: center;
+        display: block;
+    
+}
+
+.mobile_menu a{ 
+text-decoration: none;
+color: black;
+font-family: 'Montserrat Semi Bold', sans-serif;
+font-size: clamp(8px, 2.200vw, 11px);
+/* clamp(5px, 2.200vw, 10px) */
+}
+
+.mobile_logo{ 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0;
+    text-align: center;
+    display: block;
+}
+.mobile_logo{ 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    text-align: center;
+    display: block;
+}
+.mobile_logo img{ 
+
+    max-width: 70%;
+
+}
+.mob_transfer{
+    display: block;
+    line-height:0.1;
+}
+.analytics-title h1 {
+    font-size: clamp(14px, 5.213vw, 60px);
+    font-family: 'Unbounded-Bold', sans-serif;
+    margin-top:0;
+    margin-bottom:0;
+    line-height:1.2;
+}
+
+
+
+/* ОСНОВНЫЕ ЗАПРОСЫ */
+
+.grid-requests{   
+    /* display: grid;
+    grid-template-columns: 46% 47%; */
+
+    /* grid-template-rows: auto;
+    grid-template-areas:"LT RT"; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width:  100%;
+    overflow-wrap: anywhere;
+    gap:7% ;
+}
+.left-requests {
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
+}
+.left-requests p {
+    font-size: clamp(12px, 5.000vw, 25px);
+    line-height: 1.1;
+}
+.left-requests h2 {
+    letter-spacing: .2rem;
+    font-size: clamp(20px, 8.000vw, 40px);
+
+    white-space: nowrap;
+}
+.develop_img img{
+    width: clamp(21px, 8.400vw, 42px);
+}
+/* .left-requests img {
+    width: clamp(15px, 6.000vw, 30px);
+} */
+
+.img_setting, .img_set, .set_img, .setting_img img{
+    width: clamp(25px, 10.000vw, 50px);
+}
+.left-requests h3 {
+    font-size:clamp(10px, 4.000vw, 20px);
+    line-height: 1.1;
+}
+.right-requests {
+    grid-area: RT;
+    display: grid;
+    flex-direction: column;
+    max-width: 100%;
+    white-space: nowrap;
+}
+.right-reqimg img {
+    justify-self: center;
+    width: 45%;
+}
+.button-big {
+
+    font-size: clamp(10px, 4.000vw, 20px);
+
+}
+.button-small {
+    font-family: 'Unbonded', sans-serif;
+    font-size: clamp(7px, 3.000vw, 15px);
+    color: #000000;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
