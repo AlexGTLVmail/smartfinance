@@ -1722,7 +1722,7 @@ width: 85%;
     flex-wrap: wrap;
     width:1151px;
     max-width: 98%;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     border-radius: 20px;
     position: relative;}
 

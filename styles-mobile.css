@@ -31,6 +31,22 @@
     .analytics-image img {
         display: none;
     }
+    .button-big {
+        font-size: clamp(10px, 4.000vw, 20px);
+    }
+    .button-small { 
+        font-size: clamp(7px, 3.000vw, 15px);
+    }
+    
+}
+@media (max-width: 800px) {
+.button-big {
+    font-size: clamp(10px, 4.000vw, 20px);
+}
+.button-small { 
+    font-size: clamp(7px, 3.000vw, 15px);
+}
+
 }
 @media (max-width: 500px) {
 /* ВЕРХНЯЯ ФОРМА ЗВОНКА И ОФОРМЛЕНИЯ ЗАЯВКИ */
@@ -233,16 +249,10 @@ font-size: clamp(8px, 2.200vw, 11px);
     width: 45%;
 }
 .button-big {
-
     font-size: clamp(10px, 4.000vw, 20px);
-
 }
-.button-small {
-    font-family: 'Unbonded', sans-serif;
+.button-small { 
     font-size: clamp(7px, 3.000vw, 15px);
-    color: #000000;
-    text-align: center;
-    flex-grow: 1;
 }
 
 
