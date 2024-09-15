@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Профессиональные услуги финансовой аналитики, бухгалтерского учета, бизнес-консультирования и аудита. Мы помогаем компаниям оптимизировать финансы, удвоить прибыль и успешно развиваться на рынке. Экспертные решения для роста вашего бизнеса от команды с многолетним опытом.">
     <title>Здоровые финансы</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles-desktop.css" media="screen">
     <link rel="stylesheet" href="styles-mobile.css" media="screen">
 </head>
@@ -27,17 +28,17 @@
               <!-- Дополнительный блок -->
               <div class="grid-additional-block">
                 <div class="grid-additional">
-                    <button class="gridFoneBtn">  <!--  <a href="tel:+79213328730" class="add addphone"></a> -->
+                    <button class="gridFoneBtn" id="callButton">  <!--  <a href="tel:+79213328730" class="add addphone"></a> -->
                          <div class="gridaddimgFone"><img src="imgs/icons/foneblack.png" alt="Телефон"></div> 
-                         <div class="gridaddspan"><h2>+7&nbsp921&nbsp332&nbsp87&nbsp30</h2></div>                            
+                         <div class="gridaddspan"><h2>+7 921 332 87 30</h2></div>                            
                     </button>
                     <button class="gridFormBtn">
                         <div class="gridaddimg"><img src="imgs/icons/fonewhite.png" alt="Заказать звонок" class="icon" ></div> 
                         <div class="gridaddspan"><p>ЗАКАЗАТЬ<br>ЗВОНОК</p></div>                                
                     </button>
-                    <button class="gridAddBtn">
+                    <button class="gridAddBtn" id="downloadButton1">
                         <!-- <a href="#" class="add addacquaintance"> -->                            
-                            <div class="gridaddimg"><img src="imgs/icons/present.png" alt="ознакомиться с презентацией компании в сфере финансовой аналитики, бух.учёта и аудита" ></div> 
+                            <div class="gridaddimg" ><img src="imgs/icons/present.png" alt="ознакомиться с презентацией компании в сфере финансовой аналитики, бух.учёта и аудита" ></div> 
                             <div class="gridaddspan"><p>ОЗНАКОМИТЬСЯ С<br>ПРЕЗЕНТАЦИЕЙ</pn></div> 
                     </button>      
                     <button class="gridGetComm">
@@ -124,6 +125,60 @@
             <div class="analytics-container">
                 <div class="analytics-title"><h1 >ФИНАНСОВАЯ&nbsp<span class="mob_transfer"><br></span>&nbspАНАЛИТИКА</h1></div>
             </div>
+
+
+<div class="show-mobile">
+                <h3>ВАШЕГО БИЗНЕСА</h3>
+
+        <div class="show-mobile_title">
+            <div class="small-big_bis">
+               
+              <img src="imgs/marketplaicy1.png" alt="">
+            </div>           
+        </div>   
+        <h3>ЭФФЕКТИВНЫМИ МЕТОДАМИ</h3> 
+        <div class="metod-box">
+            <div class="border-container">
+                <div class="grid-metod">
+                    <div class="metod1">
+                        <img src="imgs/met1.png" alt="">
+                        <span>
+                            <h4>РАЗРАБОТКА</h4>
+                            <p>финансовой модели<br>для прогноза<br>развития бизнеса</p>
+                        </span>
+                    </div>
+                    <div class="metod2">
+                        <img src="imgs/met2.png" alt="">
+                        <div class="inline">
+                            <h4>СНИЖЕНИЕ<small class="metod_p_small"> расходов и</small><br>ПОВЫШЕНИЕ<small class="metod_p_small"> прибыли<small></h4>
+                        </div>
+                    </div>
+                    <div class="metod3">
+                        <img src="imgs/met3.png" alt="">
+                        <span>
+                            <h4>АУДИТ</h4>
+                            <p>Системы отчетности</p>
+                        </span>
+                    </div>
+                    <div class="metod4">
+                        <img src="imgs/met4.png" alt="">
+                        <span>
+                            <h4>ВЫЯВЛЕНИЕ И <br>ПРОДВИЖЕНИЕ</h4>
+                            <p>прибыльной площадки<br>
+                            <h4>И ОТКАЗ <small class="metod_p_small">от убыточной</small></h4>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+</div>
+
+
+
+
             <div class="analytics-container">
                 <div class="analytics-image">
                     <img src="imgs/youbissnes.png" alt="Ваш бизнес" class="analytics-image">
@@ -184,7 +239,7 @@
                 <div class="setting"><h3>НАСТРОИТЬ</h3><h3>БИЗНЕС-ПРОЦЕССЫ</h3><h3>НА СТАРТЕ</h3></div>
                 <div class="setting_img"><img src="imgs/picons/rem.png" alt="Логотип 2" ></div>
 
-
+                <div class="develop_br"> <p>&nbsp&nbsp</p> </div>
 
                 <div class="ques"><p><small>Бизнес есть - нет прибыли <br> Бизнес есть - нет роста <br>Бизнес с кассовым разрывом</small></p></div>
                 <div class="ques_img"><img src="imgs/picons/quesbig.png" alt=""></div>
@@ -716,12 +771,11 @@
     <div class="peaple-container ">        
             <div class="grid-peaple">  
                 <div class="left-peaple-img">
-                    <div class="peaple-img"></div><img src="imgs/consultant_svetlana.png" alt="Логотип 2"></div>                    
+                    <div class="peaple-img"></div><img src="imgs/consultant_svetlana.png" alt=""></div>                    
                     <div class="soc_icons">
-                        <a href=""><img src="imgs/icons/whatsapp.png" alt="Логотип 2"></a>
-                        <a href=""><img src="imgs/icons/telegram.png" alt="Логотип 2"></a>
-                        <a href=""><img src="imgs/icons/insta.png" alt="Логотип 2"></a>
-                    
+                        <a href=""><img src="imgs/icons/whatsapp.png" alt=""></a>
+                        <a href=""><img src="imgs/icons/telegram.png" alt=""></a>
+                        <a href=""><img src="imgs/icons/insta.png" alt=""></a>                    
                     </div>    
             <div class="right-peaple"><h2>СВЕТЛАНА НАУМКИНА</h2> <br><h3>ОСНОВАТЕЛЬ И УПРАВЛЯЮЩИЙ ПАРТНЕР <br> компании «Здоровые финансы» </h3></span></h3>                
                 <ul>
@@ -743,12 +797,11 @@
     <div class="peaple-container ">        
             <div class="grid-peaple">  
                 <div class="left-peaple-img">
-                    <div class="peaple-img"></div><img src="imgs/consultant_tatiana.png" alt="Логотип 2"></div>                    
+                    <div class="peaple-img"></div><img src="imgs/consultant_tatiana.png" alt=""></div>                    
                     <div class="soc_icons">
                         <a href=""><img src="imgs/icons/whatsapp.png" alt="Логотип 2"></a>
                         <a href=""><img src="imgs/icons/telegram.png" alt="Логотип 2"></a>
-                        <a href=""><img src="imgs/icons/insta.png" alt="Логотип 2"></a>
-                    
+                        <a href=""><img src="imgs/icons/insta.png" alt="Логотип 2"></a>                    
                     </div>    
             <div class="right-peaple"><h2>ТАТЬЯНА БАРАЕВА</h2><br><h3>УПРАВЛЯЮЩИЙ ПАРТНЁР<br> компании «Здоровые финансы» </h3></span></h3>                
                 <ul>
@@ -863,10 +916,20 @@
             
         </div>   
     </div>
-
-
-
-
+<script>
+// Кнопка для скачивания первого файла
+// document.getElementById('downloadButton1').addEventListener('click', function() {
+//   const link = document.createElement('a');
+//   link.href = 'file1.pdf';  // Путь к первому файлу
+//   link.download = 'file1.pdf';
+//   link.click();
+// });
+</script> 
+<script>
+        document.getElementById('callButton').addEventListener('click', function() {
+            window.location.href = 'tel:+79286642202';  
+        });
+    </script> 
     <script>
         document.getElementById('openFormBtn').addEventListener('click', function () {
             document.getElementById('overlay').style.display = 'block';
