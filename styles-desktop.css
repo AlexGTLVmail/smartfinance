@@ -57,7 +57,7 @@ body {
     padding: 0;
     font-family: 'Montserrat Semi Bold', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden; /* прокрутка */
+    /* overflow-x: hidden;  */
 
     opacity: 0;
     transition: opacity 2s ease;
@@ -144,6 +144,14 @@ body {
 
 
 /*↓  ИСПРАВЛЕННЫЙ ТОП ↓  */
+
+
+.sticky-head{
+    padding-top: 0px;
+    position: sticky;
+    top: 0; /* Блок прилипает к верху страницы при прокрутке */
+    z-index: 1001;
+}
 
  .grid-additional-block {
     margin: 0;
@@ -1008,11 +1016,10 @@ padding:  clamp(2px,0.878vw, 16px);
                     "K K  L L L L L L  M M"; 
     max-width: 100%;
     white-space: nowrap;  
+    gap: 5px 1px;
   }
  
-  .left-requests img {
-    width: clamp(35px, 5vw, 60px);
-     }
+
   .left-requests p {
     font-family: 'Montserrat Semi Bold', sans-serif;
     font-size:  clamp(10px, 2.5vw, 29.17px);
@@ -1031,8 +1038,8 @@ padding:  clamp(2px,0.878vw, 16px);
    
   }
   .left-requests h3{
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(7px, 2.259vw, 24px);
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: clamp(13px, 2.346vw, 27px);
     line-height: 1.3;
   }
 
@@ -1095,6 +1102,28 @@ width: 85%;
     justify-self: start;
     align-content: center;
 } 
+.img_setting img{
+    width: clamp(45px, 7.732vw, 89px);
+}
+.setting_img img{
+    align-self: center;
+    width: clamp(45px, 7.732vw, 89px);
+  }
+ .left-requests img {
+    width: clamp(45px, 7.732vw, 89px);
+     } 
+     .develop_img img {
+        align-self: center;
+        width: clamp(25px, 4.240vw, 49px)
+    }
+    .img_set img{
+        align-content: center;
+}
+    .img_set{
+        grid-area: K;
+        justify-self: start;
+        align-self: end;
+}
   .setting {
     grid-area: E;
     align-self: center;
@@ -1108,10 +1137,7 @@ width: 85%;
     
     align-self: center;
   }
-  .setting_img img{
 
-    align-self: center;
-  }
 
   .ques {
     grid-area: Q;
@@ -1120,8 +1146,9 @@ width: 85%;
     /* margin-top: 10px; */
   }
   .ques p{
-
-    line-height: 1.3;
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(14px, 2.433vw, 28px);
+    line-height: 1.4;
 
   }
   .ques_img {
@@ -1130,23 +1157,24 @@ width: 85%;
     align-self:center;
     justify-self: end;
   }
+  .ques_img img{
+    width: clamp(45px,7.472vw, 86px)
+   
+  }
+
   .sees{
     grid-area: S;
     justify-self: center;
     align-content: center;
     text-align: center;
+    margin-bottom: 5px;
 }
-.img_set{
-        grid-area: K;
-        justify-self: start;
-        align-self: end;
 
-}
 .set{
     grid-area: L;
     justify-self: center;
     text-align: center;
-    align-self: end;
+    align-self: self-start;
 }
 .set_img{
     grid-area: M;
