@@ -14,48 +14,13 @@
 
 
         <!-- Модальные окна -->
-        <div class="modal" id="profit_growth">
+   
+        <div id="modal-container" class="modal-container">
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h3>Отчет движения денежных средств (ОДДС)</h3>
-                <p>Вы увидите: <br>
-                    1. сколько денег поступило по каждому направле-
-                    нию/проекту/каналу продаж и сколько было 
-                    выплачено на закуп товара/материалов, на услуги 
-                    поставщикам, на ЗП, на налоги и т.д.;<br>
-                    2. процентное соотношение каждой группы 
-                    расходов к доходам, чтобы проанализировать 
-                    какая группа расходов больше на себя забирает 
-                    денежных средств;<br>
-                    3. сколько осталось свободных денег после 
-                    операционных затрат, которые можно вывести 
-                    без ущерба компании на  дивиденды, на покрытие 
-                    кредита  или направить на развитие бизнеса 
-                    в новом направлении;<br>
-                    4. рассчитать по какому направлению бизнеса 
-                    больше всего поступлений.<br>
-                     
-                    Если параллельно с отчетом ДДС вести 
-                    «Платежный календарь», это поможет спрогно-
-                    зировать и вовремя принять управленческие 
-                    решения, чтобы уйти от кассового разрыва.
-                    </p>
+        
             </div>
         </div>
-    
-        <div class="modal" id="balance_turnover">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Информация для кнопки 2</p>
-            </div>
-        </div>
-    
-        <div class="modal" id="modal3">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Информация для кнопки 3</p>
-            </div>
-        </div>
+   
     <!-- Модальные окна -->
        
 <!-- Контейнер для десктопа -->
@@ -336,25 +301,25 @@
                     <div class="bt-img"> <img src="imgs/icon/icon_DDS_b.png" alt="Увеличение баланса и оборота"></div>
                 </button>
     
-                <button href="#" class="grid-btn_c">
+                <button href="#" class="grid-btn_c" data-modal="five_things">
     
                     <div class="bt-text"><h3>ТОП-<big>5</big> ДЕЛ<br><small class="get-small">НА КАЖДУЮ НЕДЕЛЮ</small></h3> </div>
                     <div class="bt-img"><img src="imgs/icon/icon_top5_c.png" alt="Эффективный тайм-менеджмент"></div>
                 
                 </button>
-                <button href="#" class="grid-btn_d">
+                <button href="#" class="grid-btn_d" data-modal="analitics">
                     <div class="bt-text"><h3>АНАЛИТИКА</h3></div>
                     <div class="bt-img"><img src="imgs/icon/icon_analitics_d.png" alt="Аналитика финансовой структуры компании"> </div>
                 </button>
     
-                <button href="#" class="grid-btn_e">
+                <button href="#" class="grid-btn_e" data-modal="report_dds">
                     <div class="bt-text"><h3>ОТЧЕТ ДДС</h3></div>
                     <div class="bt-img"><img src="imgs/icon/icon_balans_e.png" alt="Сделать отчет ДДС"> </div>
     
                 </button>
-                <button href="#" class="grid-btn_f">            
+                <button href="#" class="grid-btn_f" data-modal="base_dds">            
                     <div class="bt-text"><h3>БДДС</h3></div>
-                    <div class="bt-img"><img src="imgs/icon/iсonUNIT.png" alt="Собрать базу данных клиентов"> </div>
+                    <div class="bt-img"><img src="imgs/icon/icon_bdds.png" alt="Собрать базу данных клиентов"> </div>
                 </button>
             </div>
         </div>
