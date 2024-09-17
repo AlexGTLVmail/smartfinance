@@ -59,6 +59,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden; /* прокрутка */
 
+    opacity: 0;
+    transition: opacity 2s ease;
+
 }
 .global{
     width: 1170px;
@@ -110,7 +113,7 @@ body {
 
 .promo-column-2 {
     font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(10px, 2.4vw, 29px);/* var(--font-size-medium) */
+    font-size: clamp(5px, 2.4vw, 29px);/* var(--font-size-medium) */
     text-align: left;
     line-height: 1.2;
     color: #ffffff;
@@ -119,7 +122,7 @@ body {
 
 .promo-column-4 {
     font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(10px, 2.4vw, 29px);
+    font-size: clamp(5px, 2.4vw, 29px);
     text-align: right;
     line-height: 1.2;
     color: #ffffff;
@@ -178,11 +181,10 @@ body {
     cursor: pointer; } 
 
 .gridFormBtn,.gridAddBtn,.gridGetComm{
+    transition: background 3s ease;
     font-size:clamp(5px, 0.798vw, 15px);
-
     background: rgb(163, 198, 38);
     background: linear-gradient(30deg, rgba(163, 198, 38, 1) 26%, rgba(63, 171, 60, 1) 71%);
-    transition: background 0.3s ease;
     text-decoration: none;
     display: grid;
     grid-template-columns: 28% 72%;
@@ -290,7 +292,7 @@ display: none;
 .items_menu a{
 font-family: 'Montserrat Semi Bold', sans-serif;
 font-size: clamp(5px, 2.172vw, 25px);
-/* font-size: var(--font-size-small); */
+
 text-decoration: none;
 color: #000000;
 margin-left: clamp(3px,1.998vw, 23px);
@@ -301,7 +303,7 @@ white-space: nowrap;
     grid-area: logo;
     display: grid;
     align-self: end;
-    /* width: 100%; */
+   
   
   }
   .left_img_logo img{
@@ -337,7 +339,11 @@ white-space: nowrap;
     padding-bottom:0; /* Отступы сверху и снизу */
     text-align: center;
 }
-
+.analytics-container img{
+    width: clamp(300px, 82.276vw, 947px);
+    height: auto;
+    /* border-radius: 15px; */
+}
 .analytics-title h1{
     font-size: clamp(14px, 5.213vw, 60px);
     font-family: 'Unbounded-Bold', sans-serif;
@@ -346,13 +352,14 @@ white-space: nowrap;
     background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top:clamp(0.1px, 2.763vw, 31.8px);
-    margin-bottom: clamp(0.1px, 2.763vw, 25px);
+    padding-bottom:clamp(10px,1.738vw, 20px);
+    padding-top:clamp(10px,1.738vw, 20px);
 }
 .analytics-image img {
     max-width: 100%;
     height: auto;
-    margin-bottom:clamp(10px,5.213vw, 60px)
+    padding-bottom:clamp(10px,1.738vw, 20px);
+    padding-top:clamp(10px,1.738vw, 20px);
 }
 /* Новый контейнер для "Финансовая Аналитика" */
 
@@ -368,7 +375,8 @@ white-space: nowrap;
     background: #ffffff;
     border-radius: 15px; /* Скругление углов */
     scroll-snap-align: start;
-    padding-bottom:clamp(10px,5.213vw, 60px) ;
+    padding-bottom:clamp(10px,1.738vw, 20px);
+    padding-top:clamp(10px,1.738vw, 20px);
 }
 
 .analytics-video video {
@@ -387,6 +395,9 @@ white-space: nowrap;
     justify-content: center;
     position: absolute;
     box-shadow: none;
+    margin-bottom:clamp(10px,1.738vw, 20px);
+    margin-top:clamp(10px,1.738vw, 20px);
+    box-sizing: border-box;
     /* margin-bottom: clamp(10px, 5.213vw, 60px); */
     position: relative;
     background: rgb(163,198,38);
@@ -416,301 +427,48 @@ width: 100%;
 .title_item h2{
     font-family: 'Unbounded-Bold', sans-serif;
     font-size:  clamp(10px, 3.215vw, 37px);
-
-}
-/* ПЛАШКИ */
-
-/* Шапка сайта */
-/* .header-container {
-    width: 100%;
-    max-width: 1151px;
-    height: 126px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 0 1rem;
-} */
-
-.logo img {
-    width: 100%;
-    max-height:8rem;/*  8rem*/
-    transition: all 0.3s ease; /* Плавное изменение размера логотипа */
-    margin-left: 0%;
-    margin-top: 3rem;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 2rem;
-    margin-right: -1rem;
-    max-height:8rem;
-}
-
-.menu-row {
-    display: flex;
-    justify-content: flex-end;
-}
-.menu-row a {
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(5px, 2vw, 25px);
-    /*font-size: var(--font-size-small);*/
-   
-    text-decoration: none;
-    color: #000000;
-    margin-left: 1.25rem; /* 20px в rem */
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Запрещаем перенос текста */
-}
-
-.menu-row a:hover {
-    color: var(--secondary-color);
-}
 .items-container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding-bottom:20px;
     text-align: center;
+    padding-bottom:clamp(10px,1.738vw, 20px);
+    padding-top:clamp(10px,1.738vw, 20px);
 }
 .items-container i{
     font-family: 'Montserrat Semi Bold', sans-serif;
     font-size: clamp(5px, 2.232vw, 25px);
     font-style: italic; 
 }
-.basic-queries{
-    position: relative;
-    z-index: 1;
-    scroll-snap-align: start;
-}
-.bubble-gum {
-    display: flex;
-    width: 100%;
-    max-height: 20px;
-    padding-top: 8.37%;
-    position: relative;
-}
-.bubble1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgb(163,198,38);
-    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
-    max-height:148px;
-    clip-path: polygon( 0% 0%,100% 0%,100% 75.228%,52.871% 75.228%,52.871% 75.228%,52.735% 75.292%,52.603% 75.485%,52.475% 75.805%,52.351% 76.254%,52.231% 76.83%,52.115% 77.533%,52.003% 78.364%,51.896% 79.321%,51.792% 80.404%,51.692% 81.615%,50.482% 97.453%,50.482% 97.453%,50.399% 98.37%,50.309% 99.083%,50.213% 99.592%,50.113% 99.898%,50.01% 100%,49.908% 99.898%,49.808% 99.593%,49.712% 99.084%,49.621% 98.37%,49.539% 97.453%,48.328% 81.615%,48.328% 81.615%,48.229% 80.404%,48.125% 79.32%,48.017% 78.363%,47.905% 77.532%,47.789% 76.829%,47.669% 76.253%,47.545% 75.805%,47.417% 75.485%,47.286% 75.292%,47.15% 75.228%,0% 75.228%,0% 0% );
-    }
+.items-container h3{
 
-.custom-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    max-width: 1151px; /* фиксированная ширина, можно изменить если нужно */
-    margin: 0 auto; /* центрирование блока на странице */
-    padding: 0 10px; /* отступы по бокам */
-    box-sizing: border-box;
-    position: relative;
-    text-align: center;
-    color: #000;
-    }
-.custom-block h2{
-    font-size: clamp(8px,3.215vw, 37px);
-    color:black;
+    font-size: clamp(13px, 3.997vw, 46px);
     font-family: 'Unbounded-Bold', sans-serif;
-    }
-       
-.left-logo1 {
-    height:100%; /* логотип занимает всю высоту блока */
-    width: auto;/* сохранение соотношения сторон */
-    position: absolute;
-    top: 0;
-    left: 0;
-    }
-    
-.right-logo1 {
-    height: 100%; /* логотип занимает всю высоту блока */
-    width: auto;/* сохранение соотношения сторон */
-    position: absolute;
-    top: 0;
-    right: 0;
-    }
-.basic-title h3{
-    /* font-size: 3.92rem;*/
-    font-size: 10px;
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    white-space: nowrap; 
-    color: #000;
-/*linear-gradient(135deg, #ffe100, #5ca403);*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 0rem;
-    margin-bottom: 1.5rem;
-    background-image: url("imgs/logograf.png");
-    z-index: 1;
-}
-.logograf1 img {
-    width: 100%;
-    height: 10px;/*  8rem*/
-    transition: all 0.3s ease; /* Плавное изменение размера логотипа */
-    margin-left: 0%;
-    margin-top: 3rem;
-}
-.block-text {
-    font-family: 'Montserrat-ExtraBold', sans-serif;
-    font-size: clamp(5px, 3vw, 40px);
-    color: #000;
-    text-align: center;
-    flex-grow: 1; /* текст занимает доступное пространство между логотипами */
-    padding-top:6px;
-    z-index: 2;
-}
-/* ОСНОВНЫЕ ЗАПРОСЫ */
-.block-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-}
-.text-block {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    color: #2e2e2e;
-    font-size: 2em;
-    line-height: 1.5em;
-    text-align: left;
-}
-.text-one {
-    display: flex;
-    width: 100%;
-    justify-content: start;
-    box-sizing: border-box;    
-    margin-bottom: 10px;/* задать отступы снизу */
-}
-.m-row-one  {
-    width: 100%;
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(5px, 3vw, 35px);
-    text-decoration: none;
-    color: #000000;
-    flex-basis: 90%;
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Запрещаем перенос текста */    
-    line-height:1.3;
-}
-.highlight {
-    font-family: 'Unbonded', sans-serif;
-    width: 100%;
-    font-size: clamp(0.5rem, 4vw, 3.4rem);
-    font-family: 'Unbounded-Bold', sans-serif;
-    white-space: nowrap; 
-    background: rgb(163,198,38);
-    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-    
-}
-.block-text-highlight {
-    font-family: 'Montserrat-ExtraBold', sans-serif;
-    font-size: clamp(5px, 2vw, 25px);
-    color: #000;
-    text-align: center;
-    flex-grow: 1; 
-    padding-top:7px;
-    line-height:1.3;
     white-space: nowrap;
+    background: linear-gradient(30deg, rgba(163, 198, 38, 1) 26%, rgba(63, 171, 60, 1) 71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    line-height: 1; 
 }
-.image-block {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 45%;
-    z-index:1;
-    
-}
-.image-block img {
-    width: 85%;
-    border-radius: 5px;
-    margin-top: -20px;
-}
-.cta-button {
-    position: absolute;
-    display: block;
-    background-color: #93c01f;
-    color: #fff;
-    width: 90%;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: -10px;
-    text-decoration: none;
-    border-radius: 5px;
-    z-index: 2;
-    line-height:1.5;
-}
-.grand
-{
-    font-size: 0.9em;
-}
-.small
-{
-    font-size: 0.75em;
-}
-.custom-block-qsign {
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    max-width: 1151px;
-   
-     /* отступы по бокам */
-    box-sizing: border-box;
-    margin-bottom: 3rem;
-   }
-   .custom-block-qsign img{
-    height: clamp(10px, 8vw, 100px);
-   }
-.qsign {
-    margin-top: 0.4rem;
-   flex-basis: 10%;
-}
-.qsign img {
-    height: clamp(30px, 5vw, 60px);
-    transition: all 0.3s ease;
-   
-    float: right;
-}
-.qsignbig {
-    width: 100%;
-    margin-top: 0.5rem;
-}
-.qsignbig img {
-    height: clamp(50px, 10vw, 90px);
-    transition: all 0.3s ease;
-    margin-left: 0%;
-    margin-top: -1px;
-    margin-left: 2.5rem;
-    float: right;
-}
 /* ТЕКСТ В КНОПКЕ В ОСНОВНЫХ ЗАПРОСАХ */
 .button-big{
-    flex-grow: 1; 
-
+    flex-grow: 1;
     font-family: 'Unbonded', sans-serif;
     font-size: clamp(20px, 3.258vw, 37.5px);
     color: #ffffff;
     text-align: center;
 }
+.button-big p{
+    flex-grow: 1;
+    font-family: 'Unbonded', sans-serif;
+    font-size: clamp(20px, 3.258vw, 37.5px);
+    color: #ffffff;
+    text-align: center;
+}
+
 .button-small{
     font-family: 'Unbonded', sans-serif;
     font-size: clamp(15px, 2.172vw, 25px);
@@ -719,64 +477,13 @@ width: 100%;
     flex-grow: 1; 
 }
 
-
-/* Кнопки"ЧТО ВЫ ПОЛУЧИТЕ" закомментирован Раскрыть*/
-.get-block-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    
-}
-
-.get-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 80%;
-    margin: 0 auto;
-    
-}
-
-.get-box {
-    font-family: 'Montserrat-ExtraBold', sans-serif;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 4rem;
-    padding: 20px;
-    margin-right: 50px; ;
-    margin-left: 50px;
-    font-size: 1.5em;
-    text-align: left;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    background: rgb(163,198,38);
-    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%); 
-    transition: background 0.3s ease;
-    position: relative;
-    line-height: 1.2;
-}
-
-
-.get-box img{
-position: absolute;
-right: 0;
-margin-right: 5%;
-
-}
-
-.get-box:hover {
-    background: linear-gradient(45deg, #4ca2af, #c4e0e5); 
-}
 .get-grand 
 {
     font-size: clamp(0.8rem, 2vw, 1.8rem);
     padding-left: 3%;
     white-space: nowrap;   
     text-align: left;
-}
+} 
 .get-small{
     font-size: clamp(0.223rem, 1vw, 0.86rem);
     white-space: nowrap;
@@ -796,9 +503,10 @@ width: clamp(60px, 7vw, 86px);
     justify-content: center;
     align-items: center;
     box-shadow: none;
-    margin-bottom: clamp(10px,5.213vw, 60px);
+    padding-bottom:clamp(10px,1.738vw, 20px);
+    padding-top:clamp(10px,1.738vw, 20px);
     position: relative;
-  
+    box-sizing: border-box;
 }
 .btget{  
     background: #ffffff;
@@ -823,152 +531,7 @@ width: clamp(60px, 7vw, 86px);
     color: #ffffff;
     text-align: center;
 }
-.get-container {
-    width: var(--header-width);
-    height: 126px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-   
-    margin-bottom: 50px;
-}
-.get-block {
-    background-color: #93c01f;
-    color: #fff;
-    width: 40%;
-    padding: 15px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    z-index: 2;
-    line-height:1.5;
-}
-
-/*КНОПКА, НЕ ТРОГАТЬ!*/
-.new-additional-block {
-   position: sticky;    /*  Фиксирует блок сверху экрана */
-    top: 0;             /*  Фиксирует блок сверху экрана */
-    z-index: 1000;      /*  Фиксирует блок сверху экрана */
-    width: 100%;
-    height: 63px; 
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow: hidden; /* Убираем прокрутку и скрываем вылезающее содержимое */    
-}
-
-.new-additional {               /* container */
-    display: flex;
-    width: 1151px;
-    justify-content: center;
-    margin-top: 25px;
-    height: 100%;    
-    align-items: center;
-    padding: 0 ;    
-}
-
-
-.add{         
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(2px, 1.5vw, 15px);
-    align-items: center;
-    display: flex;
-    line-height: 1.2;
-    margin-top: -25px;
-    height: 100%;
-    text-decoration: none;
-    color: #000;
-    background: rgb(163,198,38);
-    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
-    width: 23%;
-    white-space: nowrap;
-}
-.add:hover{
-background: #4ca2af;
-}
-
-.addphone{  
-    background: #f0f0f0;
-    font-size: clamp(7px, 3vw, 37px);
-    width: 39%;
-}
-
-#openFormBtn{
-    font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(2px, 1.5vw, 15px);
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    line-height: 1.2;
-    margin-top: -25px;
-    height: 100%;
-    text-decoration: none;
-    color: #000;
-    background: rgb(163,198,38);
-    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%);
-    width: 23%;
-    white-space: nowrap;  
-} 
-#openFormBtn:hover{
-    background: #4ca2af;
-    }
-#openFormBtn img{  
-        display: inline-block;        
-        margin-right: 12px;
-        margin-left: -10px;
-        margin-top: 0px; 
-        height: clamp(10px, 3vw, 46px);         
-        }
-#openFormBtn span{ 
-    margin-right: 12px;
-    margin-left: -10px;
- }
-
-/* скрытая форма заказать звонок */
-#contactForm {
-    display: none; /* Скрываем форму по умолчанию */
-    border: 1px solid #ccc;
-    padding: 20px;
-    background: #f9f9f9;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-}
-
-#overlay {
-    display: none; /* Скрываем подложку по умолчанию */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-.add img{
-display: inline-block;
-margin-right: 12px;
-margin-left: 15px;
-margin-top: 0px; 
-height: clamp(10px, 3vw, 46px); 
-
-}
-
-.addtext{    
-    display: inline-block;
-    text-align: center;
-    padding: 2px;
-
-}
+/*  */
 .block-analytics-container {
     height: 100%;
     width: 100%;
@@ -978,128 +541,7 @@ height: clamp(10px, 3vw, 46px);
     text-align: center;
     position: relative;
 }
-.bubble-container {
-    display: flex;
-    width: 100%;    
-    position: relative;
-    margin-bottom:50px ;
-     }
 
-
-
-
-.image-bub-right {
-    width: 100%; /* Adjust width as needed */
-
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 10px; /* Optional padding */
-    box-sizing: border-box; /* Include padding in element's total width and height */
-}
-
-/* Image wrapper to position the number */
-.image-wrapper3 {
-    position: relative; /* Allows absolute positioning of the number */
-}
-
-/* Image styling */
-.image3 {
-    width: 100%; /* Make the image fit the container's width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom space/gap */
-}
-
-/* Number styling */
-.number3 {
-    position: absolute; /* Position the number relative to the image */
-    top: 50%; /* Center vertically */
-    left: 10%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact center alignment */
-    font-size: 40px; /* Adjust font size as needed */
-    color: white; /* Text color (adjust to contrast with image) */
-    font-weight: bold; /* Bold text */
-}
-/* Text styling */
-.text3 {
-    margin: 5px 0; /* Margin between text lines */
-    font-size: 16px; /* Adjust font size as needed */
-    line-height: 1.5; /* Adjust line height for better readability */
-    color: #333; /* Text color */
-}
-.svg-playground {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150%;
-    /*transform: scale(-1, 1); /* Отражение по горизонтали */
-    /*transform: translate(-150px);*/
-    height: 100%;
-    margin-top: -20%;
-    
-}
-svg {
-    width: 100%;
-    height: 100%;
-   /* transform: scale(-1, 1); /* Отражение по горизонтали */
-}
-
-/* Контейнер для колонок */
-.get-bloc-container {
-    display: flex;
-    flex-direction: row; /* Колонки будут располагаться горизонтально */
-    flex-wrap: wrap; /* Чтобы колонки могли переноситься на новую строку */
-    gap: 5%;
-    width: 100%;
-    max-width: 1050px; /* Максимальная ширина для контейнера */
-}
-
-/* Стили для колонок */
-.gets-column{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1; /* Чтобы колонки занимали равное пространство */
-    max-width: 100%; /* Чтобы колонки не превышали ширину контейнера */
-}
-
-/* Стили для блоков */
-.gets-box{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 10vh; /* Высота в зависимости от высоты экрана */
-    padding: 20px;
-    margin: 0;
-    text-align: left;
-    font-family: 'Montserrat-ExtraBold', sans-serif;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    background: rgb(163,198,38);
-    background: linear-gradient(30deg, rgba(163,198,38,1) 26%, rgba(63,171,60,1) 71%); /* Градиент */
-    transition: background 0.3s ease;
-    position: relative;
-    line-height: 1;
-    flex: 1; /* Чтобы блоки занимали равное пространство */
-}
-/* Изображения внутри блоков */
-.gets-box img {
-    position: absolute;
-    right: 0;
-    margin-top: 1%;
-    margin-right: 5%;
-    width: clamp(20%, 2.7vw, 40%);
-}
-
-/*ЭТАПЫ РАБОТЫ*/
-/*body*/
-.bloc-analytics-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Чтобы блоки располагались вертикально */
-    padding: 20px;
-    box-sizing: border-box; /* Учитывает padding в общих размерах */    
-}
   .btn {
     display: inline-block;
     padding: 0.7% 4%;
@@ -1113,11 +555,17 @@ svg {
    line-height: 1.5;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
-   
+    user-select: none;   
     border-radius: 10px;
     background-color: #93c01f;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn h2{
+    flex-grow: 1;
+    font-family: 'Unbonded', sans-serif;
+    font-size:clamp(22px, 3.910vw, 45px);
+    color: #ffffff;
+    text-align: center;
 }
 
 /* ЭТАПЫ РАБОТЫ */
@@ -1152,12 +600,12 @@ svg {
     padding:5px;
     white-space: nowrap;  
     }
-    .stages_left {
-        display: flex;        
-        align-items: flex-end;
-        text-align: right;
+.stages_left {
+    display: flex;        
+    align-items: flex-end;
+    text-align: right;
      
-        }
+    }
    .stages_left span{
         display: flex;
         
@@ -1186,8 +634,8 @@ svg {
     max-width: 100%;
     width: 1151px;
     margin: 0 auto;
-    padding-top: clamp(50px, 11.295vw, 130px);
-    padding-bottom:1vw ;
+    padding-top: clamp(40px, 8.688vw, 90px);
+    padding-bottom:clamp(10px, 5.213vw, 60px) ;
     box-sizing: border-box;
 
  
@@ -1235,22 +683,22 @@ svg {
     justify-content: space-around;
     clip-path: polygon( 100% 9.249%,100% 76.048%,100% 76.048%,99.976% 77.542%,99.907% 78.963%,99.796% 80.288%,99.648% 81.501%,99.466% 82.58%,99.254% 83.506%,99.016% 84.26%,98.755% 84.823%,98.476% 85.175%,98.182% 85.297%,55.903% 85.297%,55.903% 85.297%,55.802% 85.309%,55.703% 85.347%,55.607% 85.411%,55.512% 85.5%,55.42% 85.617%,55.329% 85.76%,55.239% 85.93%,55.15% 86.129%,55.061% 86.355%,54.973% 86.61%,51.036% 98.652%,51.036% 98.652%,50.857% 99.137%,50.674% 99.514%,50.487% 99.784%,50.297% 99.945%,50.106% 99.999%,49.916% 99.945%,49.726% 99.784%,49.539% 99.514%,49.355% 99.137%,49.176% 98.652%,45.24% 86.61%,45.24% 86.61%,45.152% 86.355%,45.063% 86.129%,44.974% 85.93%,44.884% 85.76%,44.793% 85.617%,44.7% 85.5%,44.606% 85.411%,44.51% 85.347%,44.411% 85.309%,44.309% 85.297%,1.818% 85.297%,1.818% 85.297%,1.524% 85.175%,1.245% 84.823%,0.985% 84.261%,0.746% 83.506%,0.534% 82.58%,0.352% 81.501%,0.204% 80.289%,0.093% 78.963%,0.024% 77.543%,0% 76.048%,0% 9.249%,0% 9.249%,0.024% 7.754%,0.093% 6.334%,0.204% 5.008%,0.352% 3.796%,0.534% 2.717%,0.746% 1.791%,0.985% 1.036%,1.245% 0.474%,1.524% 0.122%,1.818% 0%,98.182% 0%,98.182% 0%,98.476% 0.122%,98.755% 0.474%,99.016% 1.037%,99.254% 1.791%,99.466% 2.717%,99.648% 3.796%,99.797% 5.009%,99.907% 6.334%,99.976% 7.755%,100% 9.249% );
 }
-.text-head{
-   
+.text-head{   
     display: grid;
     padding-top: 1.198vw;
-    padding-bottom:1.8vw;  
+    padding-bottom:1.8vw; 
    
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 10% 45%;
     grid-template-rows: auto;
-	grid-template-areas: "sidebar main ";
+	grid-template-areas: "sidebar gap main ";
     
 }
 .casespan span h2{
-        font-family:'Montserrat-ExtraBold';
-       font-size: clamp(5px,2.6vw,25px);
-       line-height: 1.2;
-       white-space: nowrap; 
+    font-family:'Montserrat-ExtraBold';
+    font-size: clamp(7px, 1.738vw, 20px);
+    line-height: 1.2;
+    white-space: nowrap; 
+
 }
 .casespan p{
     font-family: 'Montserrat-SemiBoldItalic';
@@ -1279,7 +727,7 @@ svg {
 }
 .casespan h3{
     font-family: 'Montserrat Semi Bold';
-    font-size:clamp(10px, 1.825vw, 20px);
+    font-size:clamp(7px, 1.825vw, 20px);
     white-space: nowrap; 
    text-align: left;
 line-height: 1.2;
@@ -1398,7 +846,7 @@ ol {
         
     .dedicatedntext{
         font-family: 'Montserrat-ExtraBold';
-        font-size: clamp(8px, 1.302vw, 18px);
+        font-size: clamp(10px, 1.502vw, 18px);
         
     }
 
@@ -1414,8 +862,9 @@ ol {
         padding-left: 20px ;
         padding-right: 20px ;
         box-sizing: border-box;
-        margin-bottom: clamp(10px, 3.47vw, 40px);
+        margin-bottom: clamp(10px, 1.738vw, 20px);
         margin-top: clamp(10px, 1.738vw, 20px);
+     padding-bottom: clamp(10px, 1.738vw, 20px);
 
     }
     .grid-bloc-container {
@@ -1493,13 +942,14 @@ ol {
     line-height: 1.5;
 }
 .bt-text p{
-    font-size: clamp(3px, 2.571vw, 27px);
+    font-size: clamp(2px, 2.571vw, 27px);
     line-height: 1.5;
-
+    padding: clamp(17px,3.215vw, 37px) 0;
  }
  .bt-text h3{
-    font-size: clamp(10px,2.181vw, 41px);
+    font-size: clamp(10px,3.562vw, 41px);
     line-height: 1.2;
+    padding: clamp(17px,3.215vw, 37px) 0;
  }
  .grid-btn_c h3{
     line-height: 0.9;
@@ -1514,7 +964,8 @@ padding:  clamp(2px,0.878vw, 16px);
 
 }
 .bt-img img{
-    width:  clamp(40px, 6.383vw, 120px);
+    width:  clamp(40px, 10.426vw, 120px);
+    padding-right: 5px;
     }
 
 .get-small{
@@ -1540,7 +991,7 @@ padding:  clamp(2px,0.878vw, 16px);
     max-width: 100%;
     width:  100%;
     overflow-wrap: anywhere;
-    gap:7% ;
+    gap:10% ;
 }
 
 .left-requests {
@@ -1576,6 +1027,7 @@ padding:  clamp(2px,0.878vw, 16px);
     background: linear-gradient(30deg, rgba(163, 198, 38, 1) 26%, rgba(63, 171, 60, 1) 71%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+   
    
   }
   .left-requests h3{
@@ -1686,25 +1138,22 @@ width: 85%;
 }
 .img_set{
         grid-area: K;
+        justify-self: start;
+        align-self: end;
 
 }
 .set{
     grid-area: L;
-
     justify-self: center;
     text-align: center;
+    align-self: end;
 }
 .set_img{
     grid-area: M;
-
     justify-self: end;
-}
-
-.spetial_gap{
-    margin-bottom: 10px;
+    align-self: end;
 }
 /* PEAPLE */
-
 .case-peaple {
     display: flex;
     justify-content: flex-end;
@@ -1787,32 +1236,55 @@ width: 85%;
         grid-area: LT;
         max-width: 100%;
         white-space: nowrap;
-        position: relative;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
     }
-.left-peaple-img img{
-    top:clamp(-40.34px, -3.505vw, -10px);
-    left:clamp(-27.9px, -2.424vw, -10px);
-    position: absolute;
+.peaple-img img{
+    transform: translate(-15px, -15px);
     overflow: visible;
     max-width: 100%;
-    width: calc(60% + 6vw);
-    -webkit-box-shadow: 3px 12px 6px 3px rgba(34, 60, 80, 0.27);
-    -moz-box-shadow: 3px 12px 6px 3px rgba(34, 60, 80, 0.27);
-    box-shadow: 3px 12px 6px 3px rgba(34, 60, 80, 0.27);
-    border-radius: 30px;       
+    width: calc(100% + 6vw);
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    border-radius: 30px; 
+    
     }
-    .soc_icons{
-      display: flex;
-      grid-auto-flow: row;
-      justify-content: space-between;
+    .image-wrapper::before {
+        content: "";
         position: absolute;
-        bottom: clamp(5px, 1.303vw, 15px);
-        left: clamp(7px, 1.738vw,30px);
-        width: 15%;
-    }
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px; /* Радиус для тени */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Настройки тени */
+        pointer-events: none;
+      }
+    .soc_icons{      
+            display: flex;
+            grid-auto-flow: row;
+            justify-content: center;
+            /* position: absolute;  */
+            /* bottom: clamp(5px, 1.303vw, 15px); */
+            /* right: clamp(7px, 1.738vw, 30px); */
+            /* width: 70%; */
+            transform: none;
+       
+        }
+        .soc_icons a{      
+padding: 10px;
+/* margin: 0 auto; */
+/* position: absolute; */
+        }
+        .soc_icons img{      
+            /* padding: 10px; */
+            /* position: relative; */
+                    }
 .soc_icons img{
       width: clamp(20px, 3.475vw, 40px);
-      padding: clamp(2px, 0.434vw, 5px);
+      /* padding: clamp(2px, 0.434vw, 5px); */
 }
 
 .employees-container {
@@ -1858,7 +1330,7 @@ width: 85%;
 .employees-img{
     max-width: 100%;
     border-radius: 30px;
-    border: 2px solid rgb(247, 247, 247); 
+    /* border: 2px solid rgb(247, 247, 247);  */
 }
 
 .employees-name{    
@@ -1885,8 +1357,9 @@ width: 85%;
     width: clamp(50px,22.321vw,230px);
     position:inherit;
     margin: clamp(-20px,-2.679vw,-10px);
-    -webkit-box-shadow: 12px 18px 15px 0px #A6A6A6; 
-    box-shadow: 12px 18px 15px 0px #A6A6A6;
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
     border-radius: 20px;
 }
 
@@ -1894,16 +1367,18 @@ width: 85%;
     width: clamp(50px,22.321vw,230px);
     position: inherit;
     margin-top:clamp(-20px,-2.679vw,-10px);
-    -webkit-box-shadow: 12px 18px 15px 0px #A6A6A6; 
-    box-shadow: 12px 18px 15px 0px #A6A6A6;    
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1); 
     border-radius: 20px;
 }
 .right-employees img{
     width: clamp(50px,22.321vw,230px);
     position: inherit;
     margin: clamp(-20px,-2.679vw,-10px);
-    -webkit-box-shadow: 12px 18px 15px 0px #A6A6A6; 
-    box-shadow: 12px 18px 15px 0px #A6A6A6;    
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);  
     border-radius: 20px;
 }
 .gradient_text {
@@ -1912,17 +1387,15 @@ width: 85%;
         background: rgb(163, 198, 38);
         background: linear-gradient(30deg, rgba(163, 198, 38, 1) 26%, rgba(63, 171, 60, 1) 71%);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
- 
+        -webkit-text-fill-color: transparent; 
 }
-
 .footer {
     width: 100%;
     background: #ffffff;
     display: flex;
     justify-content: center;
     box-shadow: none;
-    /* margin-bottom: clamp(10px, 5.213vw, 60px); */
+    margin-top:clamp(10px,1.738vw, 20px);
     position: relative;
     background: rgb(163, 198, 38);
     background: linear-gradient(30deg, rgba(163, 198, 38, 1) 26%, rgba(63, 171, 60, 1) 71%);
@@ -1964,33 +1437,28 @@ width: 85%;
     width:100%;
     max-width:1051px;
     justify-content: center;
-
-
 }
-    .footer_contacts p{
+.footer_contacts p{
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(5px, 2vw, 25px);
+    line-height: 1.2;
+    padding-bottom: clamp(10px, 1.786vw, 20px);
+    padding-left:  clamp(1px, 1.786vw, 20px);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
-        font-family: 'Montserrat Semi Bold', sans-serif;
-        font-size: clamp(5px, 2vw, 25px);
-        line-height: 1.2;
-         padding-bottom: clamp(10px, 1.786vw, 20px);
-         padding-left:  clamp(1px, 1.786vw, 20px);
-         /* padding-right: 5px; */
-         display: flex;
-         align-items: center;
-         text-decoration: none;
-        }
-        .footer_contacts a{
-             text-decoration: none;
-             color: #000;
-            }
+.footer_contacts a{
+    text-decoration: none;
+    color: #000;
+}
 .footer_contacts img{
-  width:clamp(10px,2.551vw, 28.57px);
-  margin-right: clamp(3px,0.982vw, 11px);
+    width:clamp(10px,2.551vw, 28.57px);
+    margin-right: clamp(3px,0.982vw, 11px);
 }
 .ytub{
-    padding-top:clamp(1px,0.714vw,7px) ;
-    /* margin-right: 5px; */
-    
+    padding-top:clamp(1px,0.714vw,7px);   
 }
 .gps{
     position: inherit;
@@ -2009,18 +1477,61 @@ width: 85%;
     display: grid;
     grid-area: B;
 justify-content: center;
-    /* grid-template-rows: repeat(3, 1fr); */
-
 } 
 .right_footer_grid {
     display: grid;
     grid-area: C;
     display: grid;
     justify-content: end;
-    /* grid-template-rows: repeat(3, 1fr); */
-   
+  
 } 
-
 .show-mobile{
     display: none;
+}
+
+
+
+
+/* МОДАЛЬНЫЕ ОКНА */
+
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Применение размытия */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 70%;
+width: 500px;
+    text-align: left;
+    position: relative;
+}
+.modal-content p {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-size: clamp(9px,1.433vw, 16px);
+}
+.modal-content h3 {
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: clamp(10px,1.433vw, 27px);
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }

@@ -35,7 +35,7 @@
     .button-small { 
         font-size: clamp(7px, 3.000vw, 15px);
     }
-    
+
 }
 @media (max-width: 800px) {
 
@@ -46,13 +46,31 @@
     font-size: clamp(6px, 1.500vw, 12px);
 }
 .grid-requests {
-
-    gap: calc(80px - 1vw);
+    gap: calc(120px - 5vw);
 }
+.head-case{
+    border-radius: 10px;
+}
+}
+
+
+@media (max-width: 600px){
+.left-employees, .top-employees, .right-employees, .peaple-container, .case-container {
+    border: 1.5px solid black; 
+    border-radius: 10px;
+}
+
 }
 @media (max-width: 500px){
 
+    .promo-banner {
+        /* padding: 0 1rem;
+        padding-top: clamp(25px, 9.600vw,48px); */
+         }
+         .promo-content {
+            padding: 30px 0 2px 0;
 
+        }
     .analytics-image{
         display: none;
     }
@@ -192,7 +210,7 @@ font-size: clamp(8px, 2.200vw, 11px);
 .mobile_logo img{ 
 
     max-width: 70%;
-
+    margin-top:clamp(10px,4.000vw, 20px);
 }
 .mob_transfer{
     display: block;
@@ -201,8 +219,8 @@ font-size: clamp(8px, 2.200vw, 11px);
 .analytics-title h1 {
     font-size: clamp(20px, 8.000vw, 40px);
     font-family: 'Unbounded-Bold', sans-serif;
-    margin-top:10px;
-    margin-bottom:20px;
+    /* margin-top:clamp(10px, 6.000vw, 20px); */
+    /* margin-bottom:clamp(10px, 4.000vw, 20px); */
     line-height:1.2;
 }
 /* FIN ANALITIKA YouRs BUISENESS */
@@ -220,7 +238,7 @@ font-size: clamp(8px, 2.200vw, 11px);
 
 .show-mobile h3 {
     font-family: 'Unbounded';
-    font-size: clamp(10px, 4.000vw, 20px);
+    font-size: clamp(10px, 4.166vw, 20.83px);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;             
@@ -361,14 +379,15 @@ margin-right: 10px;
     grid-template-columns: auto 1fr; /* Картинка слева, текст справа */
     justify-self: center; /* Центрируем элемент в сетке */
     align-items: center;
-    gap: 15px; /* Отступ между картинкой и текстом */
+    gap: 10px 35px; /* Отступ между картинкой и текстом */
     width: 100%; /* Ширина каждой строки равна 100% */
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
 }
 
 .grid-metod img {
-    width: clamp(35px, 14.000vw, 70px); /* Задаем фиксированную ширину для изображений */
+    width: clamp(45px, 18.400vw, 92px); /* Задаем фиксированную ширину для изображений */
     height: auto; /* Сохраняем пропорции изображений */
 
 }
@@ -379,14 +398,14 @@ margin-right: 10px;
 }
 .grid-metod h4{
     font-family: 'Montserrat-ExtraBold', sans-serif;
-    font-size: clamp(7px, 3.000vw, 15px);
+    font-size: clamp(7px, 2.680vw, 13.4px);
     line-height: 1.3;
     margin: 0;
     /* clamp(5px, 2vw, 25px) */
 }
 .grid-metod p{
     font-family: 'Montserrat Semi Bold', sans-serif;
-    font-size: clamp(6px, 2.400vw, 12px);
+    font-size: clamp(7px, 2.680vw, 13.4px);
     line-height: 1.2;
     margin: 0;
   
@@ -511,9 +530,7 @@ margin-right: 10px;
 
 }
 .head-case {
-
-    border-radius: 10px;
-
+    border-radius: 5px;
 }
 .casespan {
     padding-top: 10px;
@@ -523,6 +540,260 @@ padding-bottom: 10px;
     padding-top: 10px;
 padding-bottom: 10px;
 }
+
+/* КЕЙСЫ */
+
+.case-container {
+
+ 
+    border: 1px solid black;
+    border-radius: 10px;
+
+ }
+.case-text-shopogolik {
+    display: grid;
+    margin-top: clamp(40px, 10.000vw, 50px);
+    margin-bottom: 10px;
+    width: 955px;
+    max-width: 90%;
+    overflow-wrap: anywhere;
+    /* gap: 0.952vw 2.292vw; */
+    grid-template-columns: 100% 0;
+    /* grid-template-rows: auto; */
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar";
+    line-height: 1.3;
+}
+
+.case-text {
+    display: grid;
+    margin-top: clamp(40px, 10.000vw, 50px);
+    margin-bottom: 10px;
+    width: 955px;
+    max-width: 90%;
+    overflow-wrap: anywhere;
+    gap: 0.952vw 2.292vw;
+    grid-template-columns:100% 0;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar";
+    line-height: 1.3;
+}
+
+.ul_class {     
+    padding-bottom: 10px;
+            }
+    
+
+
+
+
+/* НАША КОМАНДА */
+.grid-peaple {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    grid-template-rows: auto;
+    grid-template-areas: "LT RT";
+    max-width: 100%;
+    width: 100%;
+    overflow-wrap: anywhere;
+    gap: 10px;
+
+}
+.peaple-img img {
+    transform: translate(-5px, -10px);
+    overflow: visible;
+    max-width: 100%;
+    width: calc(100% + 6vw);
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    border-radius: 30px;
+}
+.peaple-container {
+    border: 0px;
+}
+
+
+
+.right-peaple h2 {
+    font-size: clamp(10px, 4.600vw, 23px);
+    white-space: nowrap;
+
+}
+.right-peaple h3 {
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: clamp(5px,2.200vw, 11px);
+    /* white-space: nowrap; */
+    line-height: 1.3;
+}
+
+.right-peaple p {
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    padding-right: clamp(2px, 0.521vw, 5px);
+    /* white-space: nowrap; */
+    line-height: 1.3;
+    font-size: clamp(10px, 2.000vwvw, 5px);
+    word-wrap: break-word;
+}
+
+.employees-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 26% 38% 26%;
+    justify-content: center;
+    justify-items: center;
+    align-self: end;
+    gap: 10px;
+}
+
+.left-employees {
+    border:0px;
+    border-radius: 20px;
+    display: grid;
+    position: relative;
+    grid-template-rows: 60% 40%;
+    gap: clamp(1px, 3.571vw, 40px);
+}
+
+.top-employees {
+    border:0px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    gap: clamp(1px, 3.571vw, 40px);
+    /* gap: 10px; */
+    justify-items: center;
+    align-self: start;
+}
+
+.right-employees {
+    border:0px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    gap: clamp(1px, 3.571vw, 40px);
+    /* justify-self: start; */
+    /* gap: 10px; */
+}
+.left-employees img {
+    width: clamp(50px, 22.321vw, 230px);
+    position: inherit;
+    margin: 0; 
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    border-radius: 10px;
+}
+
+.top-employees img {
+    width: clamp(50px, 22.321vw, 230px);
+    position: inherit;
+   margin: 0;
+   -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+   -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+   box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    border-radius: 10px;
+}
+
+.right-employees img {
+    width: clamp(50px, 22.321vw, 230px);
+    position: inherit;
+    margin:0; 
+    -webkit-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    box-shadow: 5px 7px 19px -7px rgba(66, 68, 90, 1);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
