@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Профессиональные услуги финансовой аналитики, бухгалтерского учета, бизнес-консультирования и аудита. Мы помогаем компаниям оптимизировать финансы, удвоить прибыль и успешно развиваться на рынке. Экспертные решения для роста вашего бизнеса от команды с многолетним опытом.">
     <title>Здоровые финансы</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles-desktop.css" media="screen">
     <link rel="stylesheet" href="styles-mobile.css" media="screen">
@@ -339,10 +340,38 @@
 
 
 
-            
+        <!-- ПЫТАЮСЬ НАСТРОИТЬ ФОРМУ НА БИТРИКС     -->
         <div class="get">
-            <button type="button" class="btn"><p class="button-big">ОСТАВЬТЕ&nbsp&nbspЗАЯВКУ</p> <p class="button-small">И&nbsp&nbspПОЛУЧИТЕ&nbsp&nbspСКИДКУ</p></button>
+            <button type="button" class="btn" id="open-crm-form" ><p class="button-big">ОСТАВЬТЕ&nbsp&nbspЗАЯВКУ</p> <p class="button-small">И&nbsp&nbspПОЛУЧИТЕ&nbsp&nbspСКИДКУ</p></button>
         </div>
+
+   <!-- обход CORS ЧЕРЕЗ IFRAME-->
+<!-- МОДАЛЬНОЕ ОКНО, СОДЕРЖАЩЕЕ IFRAME. ВНИМАНИЕ НА ССЫЛКУ -->
+   <div id="crmModal" class="modal">
+    <div class="modal-content">
+        <span class="close">×</span>
+        <iframe id="crm-form-iframe" src="https://b24-2e5694.bitrix24.site/crm_form_j3w26/" frameborder="0" style="width:100%; height: 700px; overflow:hidden;" scrolling="no"></iframe>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -387,7 +416,7 @@
                 <div class="box stages_left"><img src="imgs/arrow/arrow3.webp" type="image/webp" alt=""><span class="arrowspan"><h2>ДОГОВОР</h2>
                     <p>Проводим первичную<br>консультацию и<br>определяем задачи</p></span>
                 </div>
-                <div class="box stages_left"><img src="imgs/arrow/arrow4.webp" type="image/webp" alt=""><span class="arrowspan"><h2>СБОР ИНФОРМАЦИИ</h2>
+                <div class="box stages_left"><img src="imgs/arrow/arrow4.webp" type="image/webp" alt=""><span class="arrowspan"><h2>СБОР <br class="br">ИНФОРМАЦИИ</h2>
                     <p>Собираем информацию,<br>выстраиваем систему<br>учета и финансовую модель</p></span>
                 </div>
 
@@ -459,40 +488,40 @@
     
 
 
-    <!--NEW CODE-->
+    <!--ВТОРОЙ БЛОК КНОПОК-->
 
 
     <div class="grid-analytics-container">
         <div class="grid-bloc-container">
     
             <div class="grid-column">
-                <button href="#" class="grid-btn_a">
+                <button href="#" class="grid-btn_a" data-modal="cash_flow">
                             <div class="bt-text"><p>Отчёт о  движении <br>денежных средств</p></div>
                             <div class="bt-img"><img src="imgs/icon/iconODDS.png" alt="Рост прибыли вашей компании">  </div>
                 </button>
     
-                <button href="#" class="grid-btn_b">                            
+                <button href="#" class="grid-btn_b" data-modal="profits_losses">                            
                     <div class="bt-text"><p>Отчёт о прибылях<br> и убытках(ОПиУ)</p></div>
                     <div class="bt-img"> <img src="imgs/icon/iconOPiU.png" alt="Увеличение баланса и оборота"></div>
                 </button>
     
-                <button href="#" class="grid-btn_c">
+                <button href="#" class="grid-btn_c" data-modal="management_balance">
     
                     <div class="bt-text"><p>Управленческий <br> баланс</p> </div>
                     <div class="bt-img"><img src="imgs/icon/iconUpravBalans.png" alt="Эффективный тайм-менеджмент"></div>
                 
                 </button>
-                <button href="#" class="grid-btn_d">
+                <button href="#" class="grid-btn_d" data-modal="analysis_abc">
                     <div class="bt-text"><p>ABC<br>анализ</p></div>
                     <div class="bt-img"><img src="imgs/icon/iconABC.png" alt="Аналитика финансовой структуры компании"> </div>
                 </button>
     
-                <button href="#" class="grid-btn_e">
+                <button href="#" class="grid-btn_e" data-modal="fin_model">
                     <div class="bt-text"><p>Финансовая<br>модель</p></div>
                     <div class="bt-img"><img src="imgs/icon/iconfinans.png" alt="Сделать отчет ДДС"> </div>
     
                 </button>
-                <button href="#" class="grid-btn_f">            
+                <button href="#" class="grid-btn_f" data-modal="unit_economy">            
                     <div class="bt-text"><p>UNIT<br>экономика</p></div>
                     <div class="bt-img"><img src="imgs/icon/iсonUNIT.png" alt="Собрать базу данных клиентов"> </div>
                 </button>
@@ -944,35 +973,7 @@
             
         <!-- </div>   
     </div> -->
-<script>
-const openModalButtons = document.querySelectorAll('.open-modal');
 
-// Получаем все модальные окна
-const modals = document.querySelectorAll('.modal');
-
-// Добавляем обработчики на кнопки
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        modal.style.display = 'flex';
-    });
-});
-
-// Добавляем обработчик для закрытия модальных окон
-modals.forEach(modal => {
-    modal.querySelector('.close').addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Закрытие окна при клике вне модального контента
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-</script> 
 <script>
         document.getElementById('callButton').addEventListener('click', function() {
             window.location.href = 'tel:+79286642202';  

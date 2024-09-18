@@ -60,7 +60,17 @@
     border-radius: 10px;
 }
 
+    .modal-content {
+        padding: 15px;
+        max-width: 90%; /* Ограничение ширины на мобильных устройствах */
 }
+
+}
+@media (max-width: 400px){
+.br{
+    display: block;
+    line-height: 0.1;
+}}
 @media (max-width: 500px){
 
     .promo-banner {
@@ -508,7 +518,7 @@ margin-right: 10px;
 }
 .right-reqimg img {
     justify-self: center;
-    width: 45%;
+    width: 55%;
 }
 .button-big {
     font-size: clamp(10px, 4.000vw, 20px);
@@ -718,12 +728,17 @@ gap: 20px;
 
 
 
+.btn {
+    display: inline-block;
+    padding: 0.7% 4%;
+    border-radius: 5px;
+}
 
+.btn h2 {
+    font-family: 'Unbonded', sans-serif;
+    font-size: 22px;
 
-
-
-
-
+}
 
 
 
