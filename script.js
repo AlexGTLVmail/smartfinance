@@ -1,4 +1,4 @@
-console.log("JavaScript файл подключен успешно!");
+console.log("Sorry bro, I did the best I could");
 // ПОДКЛЮЧЕНИЕ КНОПОК
 //НА ССЫЛКИ
 // document.getElementById('myButton').addEventListener('click', function() {
@@ -7,7 +7,7 @@ console.log("JavaScript файл подключен успешно!");
 
 //НА ЗВОНКИ
 document.getElementById('callButton').addEventListener('click', function() {
-  window.location.href = 'tel:+79286642202';
+  window.location.href = 'tel:+79213328730';
 });
 
 //НА ЗВОНКИ
@@ -72,7 +72,7 @@ window.addEventListener('click', (event) => {
 
 
 
-// ПЫТАЮСЬ ИЗМЕНИТЬ ФОРМУ ЗАЯВКИ НА BITRIX
+// ФОРМА ЗАЯВКИ НА BITRIX
 
 
  // Получаем модальное окно
@@ -100,3 +100,16 @@ window.addEventListener('click', (event) => {
          modal.style.display = "none";
      }
  }
+
+
+//  СТИЛИ   b24-form-btn
+
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var formFields = document.querySelectorAll('.b24-form-btn');
+    //     formFields.forEach(function(field) {
+    //         field.style.backgroundColor = '#f0f0f0'; // Пример изменения фона
+    //         field.style.border = '1px solid #ccc'; // Пример изменения границы
+    //     });
+    // });
+
